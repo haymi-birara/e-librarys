@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="elibrary.UserProfileController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Profile Information" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    
+    <GridPane vgap="10" hgap="10">
+        <Label text="Username:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="usernameField" GridPane.rowIndex="0" GridPane.columnIndex="1" editable="false"/>
+        
+        <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="emailField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <Button text="Update Profile" onAction="#handleUpdateProfile" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+    
+    <Separator/>
+    
+    <Label text="Change Password" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    
+    <GridPane vgap="10" hgap="10">
+        <Label text="Current Password:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="currentPasswordField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        
+        <Label text="New Password:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="newPasswordField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        
+        <Label text="Confirm Password:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="confirmPasswordField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <Button text="Change Password" onAction="#handleChangePassword" style="-fx-background-color: #2196F3; -fx-text-fill: white;"/>
+</VBox> 

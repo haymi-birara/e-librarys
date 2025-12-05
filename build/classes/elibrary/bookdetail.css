@@ -1,0 +1,36 @@
+/* Root VBox styling */
+.vbox {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.3, 0, 4);
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 10;
+}
+
+/* ImageView styling */
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);
+    -fx-border-radius: 5;
+}
+
+/* Title label */
+#titleLabel {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Author label */
+#authorLabel {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+}
+
+/* Quantity label */
+#quantityLabel {
+    -fx-font-size: 14px;
+    -fx-text-fill: #27ae60;
+}

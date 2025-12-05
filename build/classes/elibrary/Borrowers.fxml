@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="elibrary.BorrowersController"
+            prefWidth="600.0" prefHeight="400.0" stylesheets="@borrowers.css">
+    
+    <TableView fx:id="borrowerTable" layoutX="14.0" layoutY="14.0" prefWidth="572.0" prefHeight="370.0">
+        <columns>
+            <TableColumn fx:id="colName" text="Name" prefWidth="190"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="190"/>
+            <TableColumn fx:id="colPhone" text="Phone" prefWidth="190"/>
+        </columns>
+    </TableView>
+    
+</AnchorPane>

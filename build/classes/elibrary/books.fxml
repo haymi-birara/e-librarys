@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="elibrary.BooksController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label text="Books Management" style="-fx-font-size: 24px;"/>
+    
+    <!-- TableView to display books -->
+    <TableView fx:id="booksTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200"/>
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="150"/>
+            <TableColumn fx:id="isbnColumn" text="ISBN" prefWidth="100"/>
+            <TableColumn fx:id="availableColumn" text="Available" prefWidth="100"/>
+            <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="100"/> <!-- Added Quantity Column -->
+            <TableColumn fx:id="coverImageColumn" text="Cover Image" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- Add/Edit/Delete Buttons -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Add" onAction="#handleAdd" styleClass="primary-button"/>
+        <Button text="Edit" onAction="#handleEdit" styleClass="primary-button"/>
+        <Button text="Delete" onAction="#handleDelete" styleClass="primary-button"/>
+    </HBox>
+
+    <!-- Pagination for book list -->
+    <Pagination fx:id="pagination" VBox.vgrow="ALWAYS"/>
+</VBox>

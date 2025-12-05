@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="elibrary.BorrowingController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label text="Borrowing Management" style="-fx-font-size: 24px;"/>
+    <TableView fx:id="borrowingTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="User_id" prefWidth="50"/>
+            <TableColumn fx:id="bookIdColumn" text="Book ID" prefWidth="100"/>
+<!--            <TableColumn fx:id="borrowerIdColumn" text="Borrower ID" prefWidth="100"/>-->
+            <TableColumn fx:id="borrowDateColumn" text="Borrow Date" prefWidth="150"/>
+            <TableColumn fx:id="returnDateColumn" text="Return Date" prefWidth="150"/>
+        </columns>
+    </TableView>
+    <Pagination fx:id="pagination" VBox.vgrow="ALWAYS"/>
+</VBox>

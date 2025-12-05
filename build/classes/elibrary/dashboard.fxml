@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="elibrary.DashboardController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label text="Welcome to E-Library System" style="-fx-font-size: 24px;"/>
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Books" onAction="#handleBooks" styleClass="primary-button"/>
+        <Button text="Borrowing" onAction="#handleBorrowing" styleClass="primary-button"/>
+        <Button text="Reports" onAction="#handleReports" styleClass="primary-button"/>
+    </HBox>
+</VBox> 

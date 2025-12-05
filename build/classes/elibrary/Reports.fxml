@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?> <!-- Add this import -->
+<?import javafx.scene.control.Alert?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableCell?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="elibrary.ReportsController" spacing="20">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Report Type Selection -->
+    <ComboBox fx:id="reportTypeCombo" promptText="Select Report Type" />
+
+    <!-- Date Picker Fields -->
+    <HBox spacing="10">
+        <DatePicker fx:id="startDatePicker" promptText="Start Date" />
+        <DatePicker fx:id="endDatePicker" promptText="End Date" />
+    </HBox>
+
+    <!-- Generate Report Button -->
+  <Button fx:id="generateButton" text="Generate Report" onAction="#handleGenerateReport" />
+
+
+    <!-- Report Table View -->
+    <TableView fx:id="reportTable" prefWidth="600">
+        <TableColumn fx:id="colTitle" text="Title" prefWidth="300" />
+        <TableColumn fx:id="colValue" text="Value" prefWidth="300" />
+    </TableView>
+</VBox>
+

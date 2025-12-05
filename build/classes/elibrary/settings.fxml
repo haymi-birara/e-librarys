@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="elibrary.SettingsController" prefWidth="500" prefHeight="400" stylesheets="@settings.css">
+
+    <children>
+        <VBox layoutX="50" layoutY="30" spacing="15">
+            <Label text="Library Settings" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+            <HBox spacing="10">
+                <Label text="Max Borrow Days:"/>
+                <TextField fx:id="maxBorrowDaysField" promptText="Enter max borrow days"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Max Books Per User:"/>
+                <TextField fx:id="maxBooksPerUserField" promptText="Enter max books per user"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Fine Per Day:"/>
+                <TextField fx:id="finePerDayField" promptText="Enter fine per day"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Enable Notifications"/>
+                <CheckBox fx:id="enableNotificationsCheck" onAction="#handleEnableNotificationsAction"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Enable Auto Renewal"/>
+                <CheckBox fx:id="autoRenewalCheck" onAction="#handleAutoRenewalAction"/>
+            </HBox>
+
+       <Button text="Save Settings" fx:id="saveButton" onAction="#handleSave"/>
+
+        </VBox>
+    </children>
+</AnchorPane>

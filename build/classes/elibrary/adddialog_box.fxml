@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+
+<DialogPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="elibrary.AddDialogBoxController"
+            stylesheets="@style.css">
+
+    <content>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <GridPane vgap="10" hgap="10">
+                <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="txtTitle" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Author:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="txtAuthor" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="ISBN:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="txtIsbn" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <TextField fx:id="txtCategory" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <TextField fx:id="txtQuantity" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+                <!-- Cover Image Upload -->
+                <HBox spacing="10" alignment="CENTER_LEFT" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                    <Label text="Cover Image:" styleClass="form-label"/>
+                    <TextField fx:id="coverUrlField" promptText="Image URL" styleClass="form-field" HBox.hgrow="ALWAYS"/>
+                    <Button text="Upload" onAction="#handleUploadCover" styleClass="secondary-button"/>
+                </HBox>
+
+                <!-- Cover Preview -->
+                <ImageView fx:id="imgCover" fitWidth="200" fitHeight="300" preserveRatio="true"
+                           GridPane.columnSpan="2" GridPane.rowIndex="6"
+                           styleClass="cover-preview"/>
+            </GridPane>
+
+            <!-- Buttons -->
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button fx:id="btnSave" text="Save" onAction="#handleSave"/>
+                <Button fx:id="btnCancel" text="Cancel" onAction="#handleCancel"/>
+            </HBox>
+        </VBox>
+    </content>
+</DialogPane>

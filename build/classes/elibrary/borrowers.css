@@ -1,0 +1,44 @@
+/* Root background */
+.anchor-pane {
+    -fx-background-color: #f8f9fa;
+}
+
+/* TableView styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 1);
+}
+
+/* TableColumn headers */
+.table-view .column-header {
+    -fx-background-color: #343a40;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Table rows */
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: #f1f3f5;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #dbeafe;
+}
+
+/* Table cells */
+.table-cell {
+    -fx-font-size: 13px;
+    -fx-text-fill: #212529;
+    -fx-alignment: CENTER-LEFT;
+}

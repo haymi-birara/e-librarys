@@ -1,0 +1,136 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: linear-gradient(to bottom right, #4a90e2, #357abd);
+}
+
+.login-container {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-min-width: 400;
+    -fx-max-width: 400;
+}
+
+.title-text {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-fill: #2c3e50;
+}
+
+.subtitle-text {
+    -fx-font-size: 14px;
+    -fx-fill: #7f8c8d;
+}
+
+.form-container {
+    -fx-padding: 20;
+    -fx-spacing: 15;
+}
+
+.text-field, .password-field {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 5;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 5;
+    -fx-padding: 12;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-effect: dropshadow(three-pass-box, rgba(74,144,226,0.2), 5, 0, 0, 0);
+}
+
+.checkbox {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+}
+
+.checkbox .box {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 3;
+}
+
+.checkbox:selected .box {
+    -fx-background-color: #4a90e2;
+    -fx-border-color: #4a90e2;
+}
+
+.primary-button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 12 30;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #357abd;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.secondary-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 12 30;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #c0392b;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.link-text {
+    -fx-fill: #7f8c8d;
+    -fx-font-size: 14px;
+}
+
+.hyperlink {
+    -fx-font-size: 14px;
+    -fx-text-fill: #4a90e2;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #357abd;
+    -fx-underline: true;
+}
+
+/* Alert Dialog Styles */
+.dialog-pane {
+    -fx-background-color: white;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #4a90e2;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.dialog-pane .content {
+    -fx-font-size: 14px;
+    -fx-padding: 20;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-background-radius: 5;
+}
+
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #357abd;
+}

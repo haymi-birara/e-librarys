@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="20.0" styleClass="login-container"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="elibrary.RegisterController" stylesheets="@styles.css">
+    
+    <padding>
+        <Insets bottom="30.0" left="40.0" right="40.0" top="30.0"/>
+    </padding>
+
+    <!-- Logo/Title Section -->
+    <VBox alignment="CENTER" spacing="5">
+        <Text styleClass="title">E-Library</Text>
+        <Text styleClass="subtitle">Create New Account</Text>
+    </VBox>
+
+    <!-- Registration Form -->
+    <VBox spacing="15" styleClass="form-container">
+        <TextField fx:id="usernameField" promptText="Username" styleClass="text-field"/>
+        <PasswordField fx:id="passwordField" promptText="Password" styleClass="text-field"/>
+        <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" styleClass="text-field"/>
+        <TextField fx:id="emailField" promptText="Email" styleClass="text-field"/>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Register" onAction="#handleRegister" styleClass="button,primary-button"/>
+            <Button text="Back to Login" onAction="#handleBackToLogin" styleClass="button,secondary-button"/>
+        </HBox>
+    </VBox>
+</VBox>

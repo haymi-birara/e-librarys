@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="elibrary.MyBorrowingsController"
+      spacing="20"
+      styleClass="my-borrowings">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="My Borrowed Books" styleClass="section-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Refresh" onAction="#handleRefresh" styleClass="button"/>
+    </HBox>
+    
+    <!-- Borrowed Books Table -->
+    <TableView fx:id="borrowedBooksTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="bookTitleColumn" text="Book Title" prefWidth="200"/>
+            <TableColumn fx:id="borrowDateColumn" text="Borrow Date" prefWidth="100"/>
+            <TableColumn fx:id="dueDateColumn" text="Due Date" prefWidth="100"/>
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="100"/>
+            <TableColumn fx:id="actionsColumn" text="Actions" prefWidth="150"/>
+        </columns>
+    </TableView>
+    
+    <!-- Summary Section -->
+    <HBox spacing="20">
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <Label text="Total Borrowed" styleClass="stat-title"/>
+            <Label fx:id="totalBorrowedLabel" styleClass="stat-value"/>
+        </VBox>
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <Label text="Overdue" styleClass="stat-title"/>
+            <Label fx:id="overdueLabel" styleClass="stat-value"/>
+        </VBox>
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <Label text="Due Soon" styleClass="stat-title"/>
+            <Label fx:id="dueSoonLabel" styleClass="stat-value"/>
+        </VBox>
+    </HBox>
+    
+</VBox> 

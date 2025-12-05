@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="elibrary.UserDashboardController"
+            stylesheets="@styles.css">
+    
+    <top>
+        <HBox styleClass="header">
+            <Label text="E-Library System" styleClass="header-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <!--<Label fx:id="notificationBadge" text="0" styleClass="notification-badge"/>-->
+                <!--<Button fx:id="notificationsButton" text="Notifications" onAction="#showNotifications"/>-->
+               <Label fx:id="welcomeLabel" layoutX="20" layoutY="20" text="Welcome!" />
+                <Button text="Logout" onAction="#handleLogout"/>
+            </HBox>
+        </HBox>
+    </top>
+    
+    <left>
+        <VBox spacing="10" styleClass="sidebar">
+            <padding>
+                <Insets top="20" right="10" bottom="20" left="10"/>
+            </padding>
+            <Button text="Browse Books" onAction="#showBrowseBooks" styleClass="sidebar-button"/>
+            <!--<Button text="My Borrowings" onAction="#showMyBorrowings" styleClass="sidebar-button"/>-->
+            <Button text="Book History" onAction="#showBookHistory" styleClass="sidebar-button"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button text="Profile" onAction="#showProfile" styleClass="sidebar-button"/>
+        </VBox>
+    </left>
+    
+    <center>
+        <StackPane fx:id="contentArea">
+            <Label text="Welcome to your dashboard!" />
+        </StackPane>
+    </center>
+    
+    <bottom>
+        <HBox styleClass="footer" alignment="CENTER">
+            <padding>
+                <Insets top="5" right="10" bottom="5" left="10"/>
+            </padding>
+            <Label text="© 2024 E-Library System. All rights reserved." styleClass="footer-text"/>
+        </HBox>
+    </bottom>
+    
+</BorderPane> 

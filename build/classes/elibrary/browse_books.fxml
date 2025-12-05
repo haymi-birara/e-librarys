@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="elibrary.BrowseBooksController"
+      spacing="20"
+      styleClass="browse-books">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <!-- Search and Filter Section -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="searchField" promptText="Search books..." prefWidth="300"/>
+        <ComboBox fx:id="categoryFilter" promptText="Category" prefWidth="150"/>
+        <ComboBox fx:id="availabilityFilter" promptText="Availability" prefWidth="150"/>
+        <Button text="Search" onAction="#handleSearch" styleClass="button"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Clear Filters" onAction="#handleClearFilters" styleClass="button"/>
+    </HBox>
+    
+    <!-- Books Grid -->
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+        <GridPane fx:id="booksGrid" hgap="20" vgap="20">
+            <!-- Books will be added dynamically -->
+        </GridPane>
+    </ScrollPane>
+    
+    <!-- Pagination -->
+    <HBox alignment="CENTER">
+        <Pagination fx:id="pagination" styleClass="pagination"/>
+    </HBox>
+    
+</VBox> 

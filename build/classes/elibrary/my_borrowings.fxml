@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="elibrary.MyBorrowingsController"
+      spacing="20" stylesheets="@styles.css">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="My Borrowed Books" styleClass="header-label"/>
+
+    <TableView fx:id="borrowingsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="bookTitleColumn" text="Book Title"  prefWidth="200"/>
+            <TableColumn fx:id="authorColumn"    text="Author"      prefWidth="150"/>
+            <TableColumn fx:id="borrowDateColumn" text="Borrow Date" prefWidth="120"/>
+            <TableColumn fx:id="dueDateColumn"    text="Due Date"    prefWidth="120"/>
+            <TableColumn fx:id="statusColumn"     text="Status"      prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Return Book" onAction="#handleReturnBook" styleClass="primary-button"/>
+        <Button text="Renew Book"  onAction="#handleRenewBook"  styleClass="secondary-button"/>
+    </HBox>
+
+    <HBox spacing="40" alignment="CENTER">
+        <VBox spacing="5" alignment="CENTER">
+            <Label text="Total Borrowed"/>
+            <Label fx:id="totalBorrowedLabel" text="0" styleClass="stat-label"/>
+        </VBox>
+        <VBox spacing="5" alignment="CENTER">
+            <Label text="Overdue"/>
+            <Label fx:id="overdueLabel" text="0" styleClass="stat-label"/>
+        </VBox>
+        <VBox spacing="5" alignment="CENTER">
+            <Label text="Due Soon"/>
+            <Label fx:id="dueSoonLabel" text="0" styleClass="stat-label"/>
+        </VBox>
+    </HBox>
+
+</VBox>

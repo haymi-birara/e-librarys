@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="elibrary.BookHistoryController"
+      spacing="20"
+      styleClass="book-history">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Book Borrowing History" styleClass="section-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Return_Book" fx:id="returnBookButton" onAction="#handleReturnBook"/>
+        <!--<Button text="Refresh" fx:id="refreshButton" onAction="#handleRefresh"/>-->
+    </HBox>
+
+    <!-- Filter Section -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <ComboBox fx:id="statusFilter" promptText="Status" prefWidth="150"/>
+        <Button text="Apply Filters" onAction="#handleApplyFilters"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <!--<Button text="Clear Filters" onAction="#handleClearFilters"/>-->
+    </HBox>
+
+    <!-- History Table -->
+    <TableView fx:id="historyTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="book_idColumn"    text="Book ID"     prefWidth="100"/>
+            <TableColumn fx:id="borrowDateColumn" text="Borrow Date" prefWidth="120"/>
+            <!--<TableColumn fx:id="dueDateColumn"    text="Due Date"    prefWidth="120"/>-->
+            <TableColumn fx:id="returnDateColumn" text="Return Date" prefWidth="120"/>
+            <TableColumn fx:id="statusColumn"     text="Status"      prefWidth="100"/>
+        </columns>
+    </TableView>
+
+</VBox>
